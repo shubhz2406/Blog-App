@@ -6,7 +6,7 @@ require('dotenv').config()
 
 const userRoute = require('../Blog App Backend/routes/user')
 const categoryRoute = require('../Blog App Backend/routes/category')
-// const commentRoute = require('../Blog App Backend/routes/comment')
+const commentRoute = require('../Blog App Backend/routes/comment')
 const blogRoute = require('../Blog App Backend/routes/blog')
 
 const dbPassword = process.env.DB_PASSWORD
@@ -18,8 +18,15 @@ app.use(bodyParser.json())
 
 app.use('/user',userRoute)
 app.use('/category',categoryRoute)
-// app.use('/comment',commentRoute)
+app.use('/comment',commentRoute)
 app.use('/blog',blogRoute)
+
+// handling bad request
+app.use('*',(req,res)=>{
+    res.status(404).json({
+        msg:'page not found'
+    })
+})
 
 
 

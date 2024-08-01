@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+
 const userSchema = new mongoose.Schema({
     _id:mongoose.Schema.Types.ObjectId,
     firstName:{type:String,required:true},
@@ -8,7 +9,5 @@ const userSchema = new mongoose.Schema({
     password:{type:String,required:true}
 
 })
-
-
 
 module.exports = mongoose.model('User',userSchema);

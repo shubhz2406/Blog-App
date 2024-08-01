@@ -4,10 +4,10 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 require('dotenv').config()
 
-const userRoute = require('../Blog App Backend/routes/user')
-const categoryRoute = require('../Blog App Backend/routes/category')
-const commentRoute = require('../Blog App Backend/routes/comment')
-const blogRoute = require('../Blog App Backend/routes/blog')
+const userRoute = require('./routes/user')
+const categoryRoute = require('./routes/category')
+const commentRoute = require('./routes/comment')
+const blogRoute = require('./routes/blog')
 
 const dbPassword = process.env.DB_PASSWORD
 mongoose.connect(`mongodb+srv://meolessi:${dbPassword}@shubh37.nlkbzju.mongodb.net/?retryWrites=true&w=majority&appName=shubh37`)

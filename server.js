@@ -1,5 +1,5 @@
 const http = require('http')
-const app = require('../Blog App Backend/app')
+const app = require('./app')
 
 require('dotenv').config()
 const port = 8000

@@ -2,7 +2,7 @@ const http = require('http')
 const app = require('../Blog App Backend/app')
 
 require('dotenv').config()
-const port = process.env.PORT || 8000
+const port = 8000
 
 const server = http.createServer(app)
 

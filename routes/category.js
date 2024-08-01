@@ -22,7 +22,7 @@ router.post('/',checkAuth,(req,res)=>{
     })
     newCategory.save()
     .then(result=>{
-        console.log('new blog added')
+        console.log('new category added')
         res.status(200).json({
             newCategory:result
         })
@@ -67,7 +67,7 @@ router.get('/',checkAuth,(req,res)=>{
     .catch(err=>{
         console.log(err)
         res.status(500).json({
-            error:TypeError
+            error:err
         })
     })
 })

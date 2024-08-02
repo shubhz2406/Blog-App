@@ -24,7 +24,7 @@ app.use('/blog',blogRoute)
 // handling bad request
 app.use('*',(req,res)=>{
     res.status(404).json({
-        msg:'page not found'
+        msg:'Hi! Use the link to test api using postman.'
     })
 })
 
